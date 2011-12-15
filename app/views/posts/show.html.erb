@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h2>タイトル:</h2>
+  <%= simple_format @post.title %>
+</p>
+
+<p>
+  <h2>概要:</h2>
+  <%= simple_format @post.body %>
+</p>
+
+
+<%= render 'comments/index' %>
+<%= render 'comments/form' %>
+
+<%= link_to '編集', edit_post_path(@post) %> |
+<%= link_to '戻る', posts_path %>
